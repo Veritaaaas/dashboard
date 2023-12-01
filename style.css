@@ -181,7 +181,7 @@ html, body {
     grid-area: content;
     background-color: #deeffe;
     display: grid;
-    gap: 20px;
+    gap: 15px;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
@@ -210,7 +210,7 @@ html, body {
     grid-template-areas: 
     "side-design project-info"
     "side-design project-socials";
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 15px;
     background-color: white;
     overflow: hidden;
@@ -242,11 +242,37 @@ html, body {
 /* Announcements */
 .announcements {
     grid-area: announcements;
+    padding: 10px;
+}
 
+.item-container {
+    width: calc(100% - 20px);
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+.item-container .item {
+    margin: 10px;
+    border-bottom: 2px solid black;
+}
+
+.item-container .item h4 {
+    margin: 3px;
+}
+
+.item-container .item p {
+    margin-top: 0;
+    font-weight: 10;
 }
 
 /* Trending */
 .trending {
     grid-area: trending;
-    border: 1px solid black;
+    padding: 10px;
+}
+
+.trending-container {
+    background-color: white;
 }
