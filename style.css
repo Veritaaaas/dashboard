@@ -21,7 +21,8 @@ html, body {
 /* Nav */
 .nav {
     grid-area: nav;
-    box-shadow: 0px 7px 18px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 /* Search Bar */
@@ -42,7 +43,8 @@ html, body {
     width: 60%;
     padding: 5px;
     border-radius: 25px;
-    background-color: rgba(226, 226, 226, 0.74);
+    background-color: #cae6ff;
+    border: none;
 }
 
 .search_bar svg:nth-child(3) {
@@ -115,6 +117,7 @@ html, body {
     background-color: #FDA172;
     color: white;
     font-weight: bold;
+    border: none;
 }
 
 
@@ -125,6 +128,7 @@ html, body {
     display: flex;
     flex-direction: column;
     padding: 5px;
+    z-index: 1;
 }
 
 #logo {
@@ -175,8 +179,9 @@ html, body {
 /* Content */
 .content {
     grid-area: content;
-    background-color: #fafafaba;
+    background-color: #deeffe;
     display: grid;
+    gap: 20px;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
@@ -187,13 +192,57 @@ html, body {
 /* Projects */
 .projects {
     grid-area: projects;
+    padding: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.project-item {
+    height: auto;
+    display: grid;
+    grid-template-columns: 0.1fr 5fr;
+    grid-template-rows: 2.5fr 0.8fr;
+    grid-template-areas: 
+    "side-design project-info"
+    "side-design project-socials";
     border: 1px solid black;
+    border-radius: 15px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.project-item .side-design {
+    grid-area: side-design;
+    background-image: linear-gradient(to bottom, #ff00d4, #00ddff);
+    border-radius: 25px;
+}
+
+.project-item .project-info {
+    grid-area: project-info;
+    padding: 10px;
+}
+
+.project-item .project-socials {
+    grid-area: project-socials;
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+}
+
+.project-item .project-socials svg {
+    height: 30px;
+    margin: 10px;
 }
 
 /* Announcements */
 .announcements {
     grid-area: announcements;
-    border: 1px solid black;
+
 }
 
 /* Trending */
