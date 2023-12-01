@@ -275,4 +275,32 @@ html, body {
 
 .trending-container {
     background-color: white;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    border-radius: 15px;
 }
+
+.trending-container .trending-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.image img {
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #FDA172;
+}
+
+.text {
+    margin-left: 10px;
+    padding: 0;
+    width: 150px;
+}
+
+.text p {
+    margin: 0;
+}
+
